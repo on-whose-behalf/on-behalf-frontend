@@ -40,7 +40,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/repos/frontend';
   }
 
   return ENV;
