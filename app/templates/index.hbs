@@ -1,0 +1,18 @@
+{{search-bar address=address action="actionSearch"}}
+{{#if isLoading}}
+  <section class="main-content">
+    <div class="row"><h2>loading...</h2></div>
+  </section>
+{{else}}
+  <section class="main-content intro">
+    <div class="about row">
+      <div class="colum">
+        <h1>We believe the government should represent its citizens.</h1>
+      </div>
+      <div class="colum">
+        <p><strong>It is common knowledge</strong> that, often, our national lawmakers do not serve the American people, but rather, various corporate interests.</p>
+        <p>The goal of OnBehalf is to shine a light on corporations' influence on your representatives so that you can better interpret their actions. Eventually, we'd like to draw a direct correlation between a lawmaker's contributors and their voting habits.</p>
+      </div>
+    </div>
+  </section>
+{{/if}}
