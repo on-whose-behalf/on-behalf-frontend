@@ -59,14 +59,14 @@ var Legislator = DS.Model.extend({
         return 'Independent';
       default:
         return 'Other';
-    };
+    }
   }.property('party'),
 
   termLength: function(){
     var termStart = this.get('term_start'),
         dateArray = termStart.split('-'),
         string;
-        
+
     string = getDateString( dateArray[1], dateArray[0] );
 
     return string;
@@ -78,8 +78,8 @@ var Legislator = DS.Model.extend({
         string;
 
     string = getDateString( dateArray[1], dateArray[0] );
-        
-    return string;    
+
+    return string;
   }.property('term_end'),
 
   twitterLink: function(){
@@ -90,12 +90,12 @@ var Legislator = DS.Model.extend({
 
     return fullLink;
   }.property('twitter_id'),
-  
+
   youtubeLink: function(){
     var youtubeID = this.get('youtube_id'),
         fullLink;
 
-    fullLink = "http://www.youtube.com/user/"+youtubeID
+    fullLink = "http://www.youtube.com/user/"+youtubeID;
 
     return fullLink;
   }.property('youtube_id'),
@@ -104,7 +104,7 @@ var Legislator = DS.Model.extend({
     var email = this.get('oc_email'),
         fullLink;
 
-    fullLink = "mailto:"+email
+    fullLink = "mailto:"+email;
 
     return fullLink;
   }.property('oc_email')
@@ -125,10 +125,10 @@ var getDateString = function(month, year) {
     years--;
     months += 12;
 
-    string = years+' years ';  
+    string = years+' years ';
     string += months + ' months';
   } else if ( months > 0 ) {
-    string = years+' years ';  
+    string = years+' years ';
     string += months + ' months';
   } else {
     string = years+' years ';

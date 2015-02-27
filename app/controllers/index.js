@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
 	// Events
 	actions: {
 		actionSearch: function(){
-			var address = this.get('address')
+			var address = this.get('address');
 			if( address && this.get('isZipcode') ){
 			  this.transitionToRoute('search', this.get('address'));
 			}
