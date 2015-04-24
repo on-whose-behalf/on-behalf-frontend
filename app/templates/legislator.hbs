@@ -1,7 +1,11 @@
 <section class="page legislator-page">
   <div class="row">
+    <h1>hi</h1>
+    {{ember-chart type="Bar" data=model width=500 height=200}}
+  </div>
+  <div class="row">
     <h1 class="title">
-      {{model.title}}. {{model.first_name}} {{model.last_name}}  
+      {{model.title}}. {{model.first_name}} {{model.last_name}}
     </h1>
      <h2 class="office">
       {{model.chamberTitle}}, {{model.state_name}} ({{model.party}})
