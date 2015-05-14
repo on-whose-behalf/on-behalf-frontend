@@ -26,15 +26,15 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    // ENV.contentSecurityPolicy = {
-    //   'default-src': "'none'",
-    //   'script-src': "'self' http://www.google-analytics.com",
-    //   'font-src': "'self'",
-    //   'connect-src': "'self' http://localhost:3000",
-    //   'img-src': "'self' http://www.google-analytics.com",
-    //   'style-src': "'self'",
-    //   'media-src': "'self'"
-    // }
+    ENV.contentSecurityPolicy = {
+      'default-src': "'none'",
+      'script-src': "'self' http://www.google-analytics.com",
+      'font-src': "'self'",
+      'connect-src': "'self' http://localhost:3000",
+      'img-src': "'self' http://www.google-analytics.com",
+      'style-src': "'self'",
+      'media-src': "'self'"
+    }
   }
 
   if (environment === 'test') {

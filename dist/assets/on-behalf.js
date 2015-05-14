@@ -529,31 +529,7 @@ define("on-behalf/routes/legislator",
     "use strict";
     var Ember = __dependency1__["default"];
 
-    __exports__["default"] = Ember.Route.extend({
-      model: function () {
-        return {
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
-          datasets: [
-            {
-              label: "My First dataset",
-              fillColor: "rgba(220,220,220,0.5)",
-              strokeColor: "rgba(220,220,220,0.8)",
-              highlightFill: "rgba(220,220,220,0.75)",
-              highlightStroke: "rgba(220,220,220,1)",
-              data: [65, 59, 80, 81, 56, 55, 40]
-            },
-            {
-              label: "My Second dataset",
-              fillColor: "rgba(151,187,205,0.5)",
-              strokeColor: "rgba(151,187,205,0.8)",
-              highlightFill: "rgba(151,187,205,0.75)",
-              highlightStroke: "rgba(151,187,205,1)",
-              data: [28, 48, 40, 19, 86, 27, 90]
-            }
-          ]
-        };
-      }
-    });
+    __exports__["default"] = Ember.Route.extend({});
   });
 define("on-behalf/routes/search", 
   ["ember","exports"],
@@ -839,7 +815,7 @@ define("on-behalf/templates/legislator",
     /**/) {
     this.compilerInfo = [4,'>= 1.0.0'];
     helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-      var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
+      var buffer = '', stack1, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
 
     function program1(depth0,data) {
       
@@ -853,14 +829,7 @@ define("on-behalf/templates/legislator",
       return buffer;
       }
 
-      data.buffer.push("<section class=\"page legislator-page\">\n  <div class=\"row\">\n    <h1>hi</h1>\n    ");
-      data.buffer.push(escapeExpression((helper = helpers['ember-chart'] || (depth0 && depth0['ember-chart']),options={hash:{
-        'type': ("Bar"),
-        'data': ("model"),
-        'width': (500),
-        'height': (200)
-      },hashTypes:{'type': "STRING",'data': "ID",'width': "INTEGER",'height': "INTEGER"},hashContexts:{'type': depth0,'data': depth0,'width': depth0,'height': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "ember-chart", options))));
-      data.buffer.push("\n  </div>\n  <div class=\"row\">\n    <h1 class=\"title\">\n      ");
+      data.buffer.push("<section class=\"page legislator-page\">\n  <div class=\"row\">\n    <h1 class=\"title\">\n      ");
       stack1 = helpers._triageMustache.call(depth0, "model.title", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
       if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
       data.buffer.push(". ");
