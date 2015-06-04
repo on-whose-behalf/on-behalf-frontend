@@ -1,10 +1,13 @@
-@import "variables"
-@import "fonts"
-@import "functions"
+// dev tools
+@import "framework/variables"
+@import "framework/fonts"
+@import "framework/mixins"
+@import "framework/placeholders/grids"
 
+// framework items
+@import "framework/normalize"
 @import "modals"
 @import "suggestions"
-//@import "legislator-page"
 
 // styles
 html, body, div, ul, h1, h2, h3, h4
@@ -17,6 +20,7 @@ body
   background-image: url("halftone.png")
 
 header
+  @extend $gridParent
   background-color: lightGrey
   height: 75px
   border-top: 5px solid accentGreen
@@ -61,6 +65,7 @@ h4
   font-size: 25px
   padding: 0
   
+  
 a
   text-decoration: none
   color: lighten(accentPeach, 20%)
@@ -71,6 +76,7 @@ a
 
 section
   padding-bottom: 25px
+  @extend $gridParent
 
   .search
     content()
@@ -115,7 +121,7 @@ section
 
 
   .row
-    content()
+    @extend $gridParent
     padding-top: 60px
 
     h2, h2 a
@@ -175,9 +181,7 @@ section
   display: inline-block
 
   .legislator
-    display: inline-block
-    vertical-align: top
-    width: calc(30% - 32px)
+    @extend $gridColumn-1-3
     padding: 15px 25px
     transition: background-color 0.2s
     border-radius: 10px 10px 0 0
@@ -234,14 +238,12 @@ section
 .about,
 .legislator-detail,
 .legislator-page
-  width: 100%
+  content()
   padding-top: 25px
 
   .colum
-    display: inline-block
     padding-bottom: 50px
-    vertical-align: top
-    width: calc( 50% - 20px )
+    @extend $gridColumn-1-2
 
   h2,
   h4,
@@ -334,9 +336,6 @@ section
 
   .main-content .row h1
     text-align: center
-
-  .legislator-list .legislator
-    width: calc(100% - 50px)
 
 
 
