@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
 	triggerSearch: function(){
 		var query = this.get('model.query');
 		this.set('address', query);
-		if(query && this.get('isZipcode')){
+		if(query && this.checkIsZipcode(query)){
 			this.search();
 		}
 	}.observes('model.query'),
@@ -13,10 +13,6 @@ export default Ember.Controller.extend({
 	// Attributes
 	legislators: [],
 	address: null,
-
-	isZipcode: function(){
-		return this.get('zipcodeRegex').test(this.get('address'));
-	}.property('address'),
 
 	zipcodeRegex: /(^\d{5}$)|(^\d{5}-\d{4}$)/,
 
@@ -28,8 +24,8 @@ export default Ember.Controller.extend({
 	actions: {
 		actionSearch: function(){
 			var address = this.get('address');
-			if( address && this.get('isZipcode') ){
-			  this.transitionToRoute('search', this.get('address'));
+			if( address && this.checkIsZipcode(address) ){
+			  this.transitionToRoute('search', address);
 			}
 		},
 		actionClearSelection: function(){
@@ -41,9 +37,6 @@ export default Ember.Controller.extend({
 		var _this = this,
 			address = this.get('model.query');
 
-		if ( !this.get('isZipcode') ){
-			return;
-		}
 		this.set('isLoading', true);
 
 		_this.clearSelection();

@@ -24,6 +24,10 @@
                   <li>
                     <strong>{{name}}</strong><em>{{format-dollars total_amount}}</em>
                   </li>
+                {{else}}
+                  <li>
+                    <strong>No data</strong>
+                  </li>
                 {{/each}}
               </ul>
             </div
@@ -34,11 +38,21 @@
                   <li>
                     <strong>{{displayName}}</strong><em>{{format-dollars amount}}</em>
                   </li>
+                {{else}}
+                  <li>
+                    No data found
+                  </li>
                 {{/each}}
               </ul>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+  {{else}}
+    <section class="main-content">
+      <div class="row">
+        <h1>Thats not a valid zipcode, try another.</h1>
       </div>
     </section>
   {{/if}}
