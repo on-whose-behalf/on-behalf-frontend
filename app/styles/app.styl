@@ -6,8 +6,6 @@
 
 // framework items
 @import "framework/normalize"
-@import "modals"
-@import "suggestions"
 
 // styles
 html, body, div, ul, h1, h2, h3, h4
@@ -31,8 +29,6 @@ header
     display: block
 
     h2, h2 a
-      inset()
-
       color: accentPeach
       display: inline-block
       font-family: pacifico
@@ -53,16 +49,14 @@ header
 
 
 h1
-  inset()
-
-  color: primaryTan
+  color: darkTan
   font-family: andadasc
   font-size: 90px
   font-weight: normal
   padding: 70px 0 35px 0
 
 h4
-  color: primaryTan
+  color: darkTan
   font-size: 25px
   padding: 0
 
@@ -76,59 +70,17 @@ a
 
 
 section
-  padding-bottom: 25px
   @extend $gridParent
-
-  .search
-    content()
-    padding-bottom: 70px
-    text-align: center
-    max-width: 100%
-
-    &.small
-      padding-top: 25px
-      padding-bottom: 0
-
-      h1
-        padding: 0
-        font-size: 50px
-        padding-right: 35px
-        display: inline-block
-
-
-    .search-btn
-      font-size: 35px
-      color: primaryTan
-      cursor: pointer
-      padding: 10px
-
-      &:hover
-        color: accentPeach
-
-    &.small .search-btn
-
-
-    &.invalid input
-      border-color: accentPeach
-
-    input
-
-      textInput()
-
-      border: 10px solid #DBDAD3
-      font-size: 30px
-      height: 45px
-      margin: 0 auto
-      width: 300px
-
+  letter-spacing: 0
 
   .row
     @extend $gridParent
+    letter-spacing: 0
 
     h2, h2 a
       font-family: andadasc
       font-weight: normal
-      color: primaryTan
+      color: darkTan
       font-size: 40px
 
 
@@ -156,11 +108,8 @@ section
       text-align: center
       font-size: 60px
       padding: 0 25px 35px
-      letter-spacing: 0
 
     h2
-      inset()
-
       color: accentPeach
       font-family: andada
       font-weight: normal
@@ -252,7 +201,7 @@ section
     padding-left: 8px
 
   p h3
-    color: primaryTan
+    color: darkTan
     font-size: 25px
     padding: 0
 
@@ -262,8 +211,6 @@ section
     margin-bottom: 25px
 
   h5
-    inset()
-
     margin: 0
     color: accentPeach
     font-size: 20px
@@ -321,13 +268,61 @@ section
   p
     margin-top: 10px
     margin-bottom: 0
-    color: primaryTan
+    color: darkTan
 
 @media (max-width: 900px)
 
   .main-content .row h1
     font-size: 40px
     text-align: center
+
+.search-bar
+  background-image: url("images/coffee-shop.jpg")
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+  .search
+    content()
+    padding-bottom: 70px
+    text-align: center
+    max-width: 100%
+    background-color: rgba(219, 218, 211, 0.6)
+
+    &.small
+      padding-top: 25px
+      padding-bottom: 25px
+
+      h1
+        padding: 0
+        font-size: 50px
+        padding-right: 35px
+        display: inline-block
+
+    .search-btn
+      font-size: 35px
+      color: darkTan
+      cursor: pointer
+      padding: 10px
+
+      &:hover
+        color: accentPeach
+
+    &.small .search-btn
+
+
+    &.invalid input
+      border-color: accentPeach
+
+    input
+
+      textInput()
+      border: 10px solid primaryTan
+      font-size: 30px
+      height: 45px
+      margin: 0 auto
+      width: 300px
+
 
 
 @media (max-width: 700px)
@@ -339,12 +334,3 @@ section
 
   .main-content .row h1
     text-align: center
-
-
-
-
-
-
-
-
-

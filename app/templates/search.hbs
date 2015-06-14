@@ -10,9 +10,7 @@
         <h1>Who else do they represent?</h1>
         <div class="colum">
           <ul class="legislator-list">
-            {{#each legislator in legislators}}
-              {{legislator-list-item action="actionClearSelection" legislator=legislator}}
-            {{/each}}
+            {{#each legislator in legislators}}{{legislator-list-item action="actionClearSelection" legislator=legislator}}{{/each}}
           </ul
           ><div class="legislator-detail">
             <h2>{{#link-to 'legislator' selectedRep}}{{selectedRep.fullName}}{{/link-to}}</h2>
