@@ -31,7 +31,7 @@ module.exports = function(environment) {
       'script-src': "'self' http://www.google-analytics.com",
       'font-src': "'self'",
       'connect-src': "'self' http://localhost:3000",
-      'img-src': "'self' http://www.google-analytics.com",
+      'img-src': "'self' http://www.google-analytics.com http://widget.uservoice.com/TdiY1ruH2dNg9pQdEropzg.js",
       'style-src': "'self'",
       'media-src': "'self'"
     }
