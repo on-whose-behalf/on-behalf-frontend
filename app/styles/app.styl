@@ -14,11 +14,12 @@ html, body, div, ul, h1, h2, h3, h4
   color: darkTan
 
 body
-  font-family: helvetica, arial
+  font-family: Verdana
   background-image: url("halftone.png")
 
 header
   @extend $gridParent
+  font-family: Verdana
   background-color: lightGrey
   height: 75px
   border-top: 5px solid accentGreen
@@ -34,19 +35,12 @@ header
       font-family: pacifico
       font-size: 38px
       font-weight: normal
-      margin-top: 5px
+      margin-top: 3px
 
     h2 a
       text-decoration: none
       &:hover
-        text-decoration: none;
-
-    input
-      textInput()
-
-      float: right
-      margin-top: 16px
-
+        text-decoration: none
 
 h1
   color: darkTan
@@ -57,7 +51,7 @@ h1
 
 h4
   color: darkTan
-  font-size: 25px
+  font-size: 20px
   padding: 0
 
 
@@ -71,10 +65,12 @@ a
 
 section
   @extend $gridParent
+  font-family: Verdana
   letter-spacing: 0
 
   .row
     @extend $gridParent
+    font-family: Verdana
     letter-spacing: 0
 
     h2, h2 a
@@ -88,7 +84,7 @@ section
 .main-content
   background-color: lightGrey
   border-top: 1px solid #ddd
-  min-height: 400px
+  min-height: 325px
 
   small
     font-size: 15px
@@ -102,7 +98,6 @@ section
 .row
     content()
     margin-top: 60px
-    margin-bottom: 30px
 
     h1
       text-align: center
@@ -225,10 +220,11 @@ section
     padding: 0
     margin: 0
     list-style: none
-    font-size: 20px
+    font-size: 17px
 
     li
       padding: 8px
+      height: 22px
 
       &:nth-child(2n)
         background-color: middleTan
@@ -237,7 +233,6 @@ section
         max-width: calc( 100% - 110px )
         overflow: hidden
         display: inline-block
-        height: 24px
 
       em
         float: right
@@ -269,6 +264,7 @@ section
     margin-top: 10px
     margin-bottom: 0
     color: darkTan
+    font-size: 17px
 
 @media (max-width: 900px)
 
@@ -308,21 +304,31 @@ section
       &:hover
         color: accentPeach
 
-    &.small .search-btn
-
-
     &.invalid input
       border-color: accentPeach
 
     input
-
       textInput()
-      border: 10px solid primaryTan
+      border: 10px solid #6A6967
       font-size: 30px
       height: 45px
       margin: 0 auto
       width: 300px
 
+.footer
+  .row
+    margin: 40px auto
+
+    .colum
+      @extend $gridColumn-1-3
+
+      h4
+        padding: 0 10px
+        font-size: 18px
+
+      p
+        padding: 0 10px
+        font-size: 15px
 
 
 @media (max-width: 700px)
